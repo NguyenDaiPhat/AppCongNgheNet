@@ -1,0 +1,15 @@
+D:\PHENIKAA\Ki4\CongNgheNet\AppCongNgheNet\AppCongNgheNet\AppCongNgheNet\bin\Debug\netstandard2.0\AppCongNgheNet.deps.json
+D:\PHENIKAA\Ki4\CongNgheNet\AppCongNgheNet\AppCongNgheNet\AppCongNgheNet\bin\Debug\netstandard2.0\AppCongNgheNet.dll
+D:\PHENIKAA\Ki4\CongNgheNet\AppCongNgheNet\AppCongNgheNet\AppCongNgheNet\bin\Debug\netstandard2.0\ref\AppCongNgheNet.dll
+D:\PHENIKAA\Ki4\CongNgheNet\AppCongNgheNet\AppCongNgheNet\AppCongNgheNet\bin\Debug\netstandard2.0\AppCongNgheNet.pdb
+D:\PHENIKAA\Ki4\CongNgheNet\AppCongNgheNet\AppCongNgheNet\AppCongNgheNet\obj\Debug\netstandard2.0\AppCongNgheNet.csproj.AssemblyReference.cache
+D:\PHENIKAA\Ki4\CongNgheNet\AppCongNgheNet\AppCongNgheNet\AppCongNgheNet\obj\Debug\netstandard2.0\AppCongNgheNet.GeneratedMSBuildEditorConfig.editorconfig
+D:\PHENIKAA\Ki4\CongNgheNet\AppCongNgheNet\AppCongNgheNet\AppCongNgheNet\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\PHENIKAA\Ki4\CongNgheNet\AppCongNgheNet\AppCongNgheNet\AppCongNgheNet\obj\Debug\netstandard2.0\Views\MainPage.xaml.g.cs
+D:\PHENIKAA\Ki4\CongNgheNet\AppCongNgheNet\AppCongNgheNet\AppCongNgheNet\obj\Debug\netstandard2.0\AppCongNgheNet.AssemblyInfoInputs.cache
+D:\PHENIKAA\Ki4\CongNgheNet\AppCongNgheNet\AppCongNgheNet\AppCongNgheNet\obj\Debug\netstandard2.0\AppCongNgheNet.AssemblyInfo.cs
+D:\PHENIKAA\Ki4\CongNgheNet\AppCongNgheNet\AppCongNgheNet\AppCongNgheNet\obj\Debug\netstandard2.0\AppCongNgheNet.csproj.CoreCompileInputs.cache
+D:\PHENIKAA\Ki4\CongNgheNet\AppCongNgheNet\AppCongNgheNet\AppCongNgheNet\obj\Debug\netstandard2.0\XamlC.stamp
+D:\PHENIKAA\Ki4\CongNgheNet\AppCongNgheNet\AppCongNgheNet\AppCongNgheNet\obj\Debug\netstandard2.0\AppCongNgheNet.dll
+D:\PHENIKAA\Ki4\CongNgheNet\AppCongNgheNet\AppCongNgheNet\AppCongNgheNet\obj\Debug\netstandard2.0\refint\AppCongNgheNet.dll
+D:\PHENIKAA\Ki4\CongNgheNet\AppCongNgheNet\AppCongNgheNet\AppCongNgheNet\obj\Debug\netstandard2.0\AppCongNgheNet.pdb
