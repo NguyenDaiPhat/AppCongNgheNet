@@ -37,7 +37,7 @@ namespace AppCongNgheNet.ViewModels
         {
             if (SelectedUser != null)
             {
-                await App.Database.DeletePersonAsync(SelectedUser);
+                await App.Database.DeleteUserAsync(SelectedUser);
                 //Users = await App.Database.GetUserAsync();
             }
         }

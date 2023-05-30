@@ -15,7 +15,9 @@ namespace AppCongNgheNet.Views
         public MyFlyoutPage()
         {
             InitializeComponent();
+            NavigationPage.SetHasNavigationBar(this, false);
             FlyoutPage.ListView.ItemSelected += ListView_ItemSelected;
+            
         }
 
         private void ListView_ItemSelected(object sender, SelectedItemChangedEventArgs e)

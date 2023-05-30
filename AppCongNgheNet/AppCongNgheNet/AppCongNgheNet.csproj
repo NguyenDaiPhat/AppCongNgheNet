@@ -12,7 +12,14 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <None Remove="Fonts\MaterialIcons.ttf" />
+    <None Remove="Fonts\MaterialIconsTwoTone.otf" />
+  </ItemGroup>
+
+  <ItemGroup>
     <EmbeddedResource Include="Databases\net03.db" />
+    <EmbeddedResource Include="Fonts\MaterialIcons.ttf" />
+    <EmbeddedResource Include="Fonts\MaterialIconsTwoTone.otf" />
   </ItemGroup>
 
   <ItemGroup>
@@ -32,9 +39,6 @@
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\MyFlyoutPage.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Update="Views\MyFlyoutPageDetail.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Update="Views\MyFlyoutPageFlyout.xaml">

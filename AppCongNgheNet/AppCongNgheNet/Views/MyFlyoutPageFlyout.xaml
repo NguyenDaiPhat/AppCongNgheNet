@@ -7,9 +7,9 @@
     <ListView x:Name="MenuItemsListView"
               SeparatorVisibility="None"
               HasUnevenRows="true"
-              ItemsSource="{Binding MenuItems}">
+              ItemsSource="{Binding MenuItems}" >
       <ListView.Header>
-        <Grid BackgroundColor="#03A9F4">
+                <Grid BackgroundColor="#FF9900">
           <Grid.ColumnDefinitions>
             <ColumnDefinition Width="10"/>
             <ColumnDefinition Width="*"/>
@@ -24,7 +24,7 @@
           <Label
               Grid.Column="1"
               Grid.Row="2"
-              Text="AppName"
+              Text="Thư viện tra cứu pháp luật"
               Style="{DynamicResource SubtitleStyle}"/>
         </Grid>
       </ListView.Header>
@@ -36,13 +36,13 @@
                     VerticalTextAlignment="Center" 
                     Text="{Binding Title}" 
                     FontSize="24"/>-->
-                            <Grid Padding="5,10">
+                            <Grid Padding="5,10" >
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="30"/>
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
                                 <Image Source="{Binding IconSource}"/>
-                                <Label Grid.Column="1" Text="{Binding Title}"/>
+                                <Label VerticalTextAlignment="Center" Grid.Column="1" Text="{Binding Title}"/>
                             </Grid>
 
                         </StackLayout>

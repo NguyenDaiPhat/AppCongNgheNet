@@ -14,7 +14,6 @@ D:\PHENIKAA\Ki4\CongNgheNet\AppCongNgheNet\AppCongNgheNet\AppCongNgheNet\obj\Deb
 D:\PHENIKAA\Ki4\CongNgheNet\AppCongNgheNet\AppCongNgheNet\AppCongNgheNet\obj\Debug\netstandard2.0\AppCongNgheNet.pdb
 D:\PHENIKAA\Ki4\CongNgheNet\AppCongNgheNet\AppCongNgheNet\AppCongNgheNet\obj\Debug\netstandard2.0\Views\ChaptersPage.xaml.g.cs
 D:\PHENIKAA\Ki4\CongNgheNet\AppCongNgheNet\AppCongNgheNet\AppCongNgheNet\obj\Debug\netstandard2.0\Views\MyFlyoutPage.xaml.g.cs
-D:\PHENIKAA\Ki4\CongNgheNet\AppCongNgheNet\AppCongNgheNet\AppCongNgheNet\obj\Debug\netstandard2.0\Views\MyFlyoutPageDetail.xaml.g.cs
 D:\PHENIKAA\Ki4\CongNgheNet\AppCongNgheNet\AppCongNgheNet\AppCongNgheNet\obj\Debug\netstandard2.0\Views\MyFlyoutPageFlyout.xaml.g.cs
 D:\PHENIKAA\Ki4\CongNgheNet\AppCongNgheNet\AppCongNgheNet\AppCongNgheNet\obj\Debug\netstandard2.0\Views\InfomationPage.xaml.g.cs
 D:\PHENIKAA\Ki4\CongNgheNet\AppCongNgheNet\AppCongNgheNet\AppCongNgheNet\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs

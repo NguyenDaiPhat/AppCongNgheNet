@@ -3,13 +3,13 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppCongNgheNet.Views.MyFlyoutPage"
              xmlns:pages="clr-namespace:AppCongNgheNet.Views">
-  <FlyoutPage.Flyout>
+  <FlyoutPage.Flyout >
     <pages:MyFlyoutPageFlyout x:Name="FlyoutPage" />
   </FlyoutPage.Flyout>
   <FlyoutPage.Detail>
     <NavigationPage>
       <x:Arguments>
-        <pages:MyFlyoutPageDetail />
+        <pages:ChaptersPage />
       </x:Arguments>
     </NavigationPage>
   </FlyoutPage.Detail>

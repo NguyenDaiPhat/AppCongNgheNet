@@ -6,6 +6,8 @@ using System.Reflection;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+[assembly: ExportFont("MaterialIcons.ttf", Alias = "Material")]
+[assembly: ExportFont("MaterialIconsTwoTone.otf", Alias = "TwoToneMaterial")]
 namespace AppCongNgheNet
 {
     public partial class App : Application

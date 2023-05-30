@@ -644,3 +644,4 @@ D:\PHENIKAA\Ki4\CongNgheNet\AppCongNgheNet\AppCongNgheNet\AppCongNgheNet.Android
 D:\PHENIKAA\Ki4\CongNgheNet\AppCongNgheNet\AppCongNgheNet\AppCongNgheNet.Android\obj\Debug\130\lp\93\jl\files.cache
 D:\PHENIKAA\Ki4\CongNgheNet\AppCongNgheNet\AppCongNgheNet\AppCongNgheNet.Android\obj\Debug\130\lp\99\jl\files.cache
 D:\PHENIKAA\Ki4\CongNgheNet\AppCongNgheNet\AppCongNgheNet\AppCongNgheNet.Android\obj\Debug\130\lp\104\jl\files.cache
+D:\PHENIKAA\Ki4\CongNgheNet\AppCongNgheNet\AppCongNgheNet\AppCongNgheNet.Android\obj\Debug\130\res\drawable\iconhomepage.png
