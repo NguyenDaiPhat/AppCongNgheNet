@@ -27,7 +27,9 @@ namespace AppCongNgheNet
             //    }
             //}
 
-            MainPage = new ChaptersPage();
+            //MainPage = new ChaptersPage();
+            MainPage = new NavigationPage(new MyFlyoutPage());
+            NavigationPage.SetHasNavigationBar(this, false);
         }
 
         protected override void OnStart()

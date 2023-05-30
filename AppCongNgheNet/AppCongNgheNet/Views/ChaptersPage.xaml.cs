@@ -13,7 +13,6 @@ namespace AppCongNgheNet.Views
 {
     public partial class ChaptersPage : ContentPage
     {
-        public ObservableCollection<User> Users { get; set; } = new ObservableCollection<User>();
         public ChaptersPage()
         {
             InitializeComponent();
