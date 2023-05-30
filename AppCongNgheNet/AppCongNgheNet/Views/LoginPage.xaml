@@ -3,10 +3,35 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppCongNgheNet.Views.LoginPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <StackLayout Padding="40" VerticalOptions="Center" HorizontalOptions="FillAndExpand" >
+
+            <Image Source="IconLog.png" HeightRequest="180" WidthRequest="180"/>
+
+            <Entry x:Name="txtUsername" Placeholder="Tài khoản" TextColor="White" PlaceholderColor="Gray"></Entry>
+            <Entry x:Name="txtPassword" Placeholder="Mật khẩu" IsPassword="True" TextColor="White" PlaceholderColor="Gray"></Entry>
+            <Button
+                VerticalOptions="Center"
+                Text="Đăng nhập"
+                TextColor="White"
+                BackgroundColor="Transparent"
+                BorderColor="Pink"
+                BorderWidth="1.5"
+                CornerRadius="50"
+                Clicked="Button_Clicked"/>
+
+            <Label HorizontalOptions="Center">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Bạn chưa có tài khoản? " TextColor="Gray"/>
+                        <Span Text="Đăng ký" TextColor="Gray" FontAttributes="Bold" TextDecorations="Underline"/>
+                    </FormattedString>
+                </Label.FormattedText>
+
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Tapped="TapGestureRecognizer_Tapped"/>
+                </Label.GestureRecognizers>
+
+            </Label>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

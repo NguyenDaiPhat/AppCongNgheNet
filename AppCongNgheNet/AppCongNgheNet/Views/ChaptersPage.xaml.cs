@@ -16,7 +16,7 @@ namespace AppCongNgheNet.Views
         public ChaptersPage()
         {
             InitializeComponent();
-            NavigationPage.SetHasBackButton(this, false);
+            //NavigationPage.SetHasBackButton(this, false);
         }
         protected override async void OnAppearing()
         {

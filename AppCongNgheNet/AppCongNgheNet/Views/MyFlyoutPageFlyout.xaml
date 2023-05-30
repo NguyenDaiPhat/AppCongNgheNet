@@ -9,7 +9,7 @@
               HasUnevenRows="true"
               ItemsSource="{Binding MenuItems}" >
       <ListView.Header>
-                <Grid BackgroundColor="#FF9900">
+                <Grid BackgroundColor="#332196F3">
           <Grid.ColumnDefinitions>
             <ColumnDefinition Width="10"/>
             <ColumnDefinition Width="*"/>
@@ -41,7 +41,7 @@
                                     <ColumnDefinition Width="30"/>
                                     <ColumnDefinition Width="*"/>
                                 </Grid.ColumnDefinitions>
-                                <Image Source="{Binding IconSource}"/>
+                                <Image WidthRequest="0" Source="{Binding IconSource}"/>
                                 <Label VerticalTextAlignment="Center" Grid.Column="1" Text="{Binding Title}"/>
                             </Grid>
 

@@ -45,5 +45,6 @@ namespace AppCongNgheNet
         protected override void OnResume()
         {
         }
+        public static bool IsUserLoggedIn { get; set; }
     }
 }

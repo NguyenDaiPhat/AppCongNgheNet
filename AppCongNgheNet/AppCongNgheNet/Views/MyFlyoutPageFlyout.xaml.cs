@@ -35,7 +35,7 @@ namespace AppCongNgheNet.Views
                 {
                     new MyFlyoutPageFlyoutMenuItem { Id = 0, Title = "Trang chủ", IconSource = "IconHomePage.png" , TargetType = typeof(ChaptersPage) },
                     new MyFlyoutPageFlyoutMenuItem { Id = 1, Title = "Đăng nhập", IconSource = "IconLogin.jpg" , TargetType = typeof(LoginPage)},
-                    new MyFlyoutPageFlyoutMenuItem { Id = 2, Title = "Giới thiệu", IconSource = "IconInformation.jpg", TargetType = typeof(InfomationPage)},
+                    new MyFlyoutPageFlyoutMenuItem { Id = 2, Title = "Giới thiệu", IconSource = "IconInformation.png", TargetType = typeof(InfomationPage)},
                 });
             }
             

@@ -3,10 +3,43 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="AppCongNgheNet.Views.InfomationPage">
     <ContentPage.Content>
-        <StackLayout>
-            <Label Text="Welcome to Xamarin.Forms!"
-                VerticalOptions="CenterAndExpand" 
-                HorizontalOptions="CenterAndExpand" />
+        <ScrollView>
+        <StackLayout Orientation="Vertical" HorizontalOptions="Center" VerticalOptions="Center">
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                    <RowDefinition Height="Auto"/>
+                </Grid.RowDefinitions>
+                <Label Padding="5" 
+                       Grid.Row="0" 
+                       Text="Nhóm 3 và phần mềm hỗ trợ quá trình xử phạt vi phạm hành chính lĩnh vực lâm nghiệp" 
+                       FontAttributes="Italic" TextColor="Black" VerticalOptions="CenterAndExpand" FontSize="Large" HorizontalTextAlignment="Center" FontFamily="Times New Roman"/>
+                <Label Padding="5" 
+                       Grid.Row="1" 
+                       Text="Phần mềm hỗ trợ quá trình xử phạt vi phạm hành chính lĩnh vực lâm nghiệp giúp mọi người có thể tra cứu các bộ luật về lâm nghiệp bằng từ khóa. Phần mềm sử dụng nghi-dinh-35-2019-nd-cp-xu-phat-vi-pham-hanh-chinh-trong-linh-vuc-lam-nghiep và cập nhật thêm nghi-dinh-07-2022-nd-cp. " 
+                       TextColor="Black" VerticalOptions="StartAndExpand" FontSize="Medium" FontFamily="Times New Roman"/>
+                <Label Padding="5" 
+                       Grid.Row="2" 
+                       Text="Sứ mệnh của phần mềm là tổ chức lại hệ thống văn bản pháp luật và kết nối cộng đồng Việt Nam, nhằm giúp công chúng và cùng công chúng xây dựng , thụ hưởng một xã hội pháp quyền tương lai gần." 
+                       TextColor="Black" FontSize="Medium" VerticalOptions="StartAndExpand" FontFamily="Times New Roman"/>
+                <Label Padding="5" Grid.Row="3" Text="Công nghệ sử dụng: xammarin" 
+                       TextColor="Black" FontSize="Medium" VerticalOptions="StartAndExpand" FontFamily="Times New Roman"/>
+                <Label Padding="5" Grid.Row="4" Text="Thành viên nhóm 3: " 
+                       TextColor="Black" FontSize="Large" FontAttributes="Bold" FontFamily="Times New Roman"/>
+                <StackLayout Grid.Row="6" Orientation="Vertical">
+                    <Label Text="- Nhóm trưởng: Nguyễn Đại Phát" VerticalOptions="Center" FontSize="Medium" TextColor="Black" FontFamily="Times New Roman"/>
+                    <Label Text="- Thành viên 1: Trọng Huynh" VerticalOptions="Center" FontSize="Medium" TextColor="Black" FontFamily="Times New Roman"/>
+                    <Label Text="- Thành viên 2: Dương An" VerticalOptions="Center" FontSize="Medium" TextColor="Black" FontFamily="Times New Roman"/>
+                    <Label Text="- Thành viên 3: Trịnh Hoàng" VerticalOptions="Center" FontSize="Medium" TextColor="Black" FontFamily="Times New Roman"/>
+                    <Label Text="- Thành viên 4: Tú Đạt" VerticalOptions="Center" FontSize="Medium" TextColor="Black" FontFamily="Times New Roman"/>
+                    <Label Text="- Thành viên 5: Tuấn" VerticalOptions="Center" FontSize="Medium" TextColor="Black" FontFamily="Times New Roman"/>
+                </StackLayout>
+            </Grid>
         </StackLayout>
+        </ScrollView>
     </ContentPage.Content>
 </ContentPage>
