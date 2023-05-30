@@ -13,6 +13,8 @@ namespace AppCongNgheNet.Views
 {
     public partial class ChaptersPage : ContentPage
     {
+       
+
         public ChaptersPage()
         {
             InitializeComponent();

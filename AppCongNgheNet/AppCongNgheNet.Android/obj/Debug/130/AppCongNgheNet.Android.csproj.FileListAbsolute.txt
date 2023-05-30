@@ -649,3 +649,6 @@ D:\PHENIKAA\Ki4\CongNgheNet\AppCongNgheNet\AppCongNgheNet\AppCongNgheNet.Android
 D:\PHENIKAA\Ki4\CongNgheNet\AppCongNgheNet\AppCongNgheNet\AppCongNgheNet.Android\obj\Debug\130\res\drawable\iconlogin.png
 D:\PHENIKAA\Ki4\CongNgheNet\AppCongNgheNet\AppCongNgheNet\AppCongNgheNet.Android\obj\Debug\130\res\drawable\iconsearch.png
 D:\PHENIKAA\Ki4\CongNgheNet\AppCongNgheNet\AppCongNgheNet\AppCongNgheNet.Android\obj\Debug\130\res\drawable\iconlog.png
+D:\PHENIKAA\Ki4\CongNgheNet\AppCongNgheNet\AppCongNgheNet\AppCongNgheNet.Android\obj\Debug\130\res\drawable\iconedit.png
+D:\PHENIKAA\Ki4\CongNgheNet\AppCongNgheNet\AppCongNgheNet\AppCongNgheNet.Android\obj\Debug\130\res\drawable\icondelete.png
+D:\PHENIKAA\Ki4\CongNgheNet\AppCongNgheNet\AppCongNgheNet\AppCongNgheNet.Android\obj\Debug\130\res\drawable\iconadd.png
