@@ -1,22 +1,58 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppCongNgheNet.Views.ChaptersPage">
-    <StackLayout>
-        <Frame BackgroundColor="#2196F3" Padding="24" CornerRadius="0">
-            <Label Text="Welcome to Xamarin.Forms!" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
-        </Frame>
-        <Button Text="Delete Database"
-                Clicked="Button_Clicked_1" />
-        <CollectionView x:Name="collectionView" SelectionMode="Single" SelectionChanged="collectionView_SelectionChanged">
-            <CollectionView.ItemTemplate>
-                <DataTemplate>
-                    <StackLayout>
-                        <Label Text="{Binding ID}"/>
-                        <Label Text="{Binding Email}"/>
-                    </StackLayout>
-                </DataTemplate>
-            </CollectionView.ItemTemplate>
-        </CollectionView>
-    </StackLayout>
+             x:Class="AppCongNgheNet.Views.ChaptersPage" Title="Trang chủ" Background="#444654">
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem IconImageSource="IconAdd.png" />
+    </ContentPage.ToolbarItems>
+    
+    <ContentPage.Content>
+        <StackLayout>
+            <Frame BackgroundColor="#332196F3" Padding="10" CornerRadius="1">
+                <Label FontFamily="Arial" Text="Thư viện tra cứu pháp luật" HorizontalTextAlignment="Center" TextColor="White" FontSize="36"/>
+            </Frame>
+
+            <Grid Margin="5" BackgroundColor="#525467" Padding="3">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*" />
+                    <ColumnDefinition Width="auto" />
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="*" />
+                </Grid.RowDefinitions>
+                <Entry FontSize="18" Placeholder="Tìm kiếm ..."  Grid.Row="0" Grid.Column="0"/>
+                <ImageButton BackgroundColor="#525467" Source="IconSearch.png" Grid.Row="0" Grid.Column="1" HeightRequest="75" WidthRequest="32" />
+            </Grid>
+
+
+            <!--<Button Text="Delete Database"
+                    Clicked="Button_Clicked_1" />-->
+            <CollectionView x:Name="collectionView" SelectionMode="Single" SelectionChanged="collectionView_SelectionChanged">
+                <CollectionView.ItemTemplate>
+                    <DataTemplate>
+                        <Frame BackgroundColor="#525467" CornerRadius="10" OutlineColor="#48495a">
+                            <StackLayout >
+                                <Grid>
+                                    <Grid.RowDefinitions>
+                                        <RowDefinition Height="*" />
+                                        <RowDefinition Height="*" />
+                                    </Grid.RowDefinitions>
+                                    <Grid.ColumnDefinitions>
+                                        <ColumnDefinition Width="*" />
+                                        <ColumnDefinition Width="auto"/>
+                                    </Grid.ColumnDefinitions>
+                                    <Label FontSize="18" Text="{Binding Title}" Grid.Row="0" Grid.Column="0" Grid.RowSpan="2"  />
+                                    <ImageButton BackgroundColor="#525467" HorizontalOptions="Center" VerticalOptions="Center" Source="IconEdit.png" Grid.Row="0" Grid.Column="1" HeightRequest="22" WidthRequest="22"/>
+                                    <ImageButton BackgroundColor="#525467" HorizontalOptions="Center" VerticalOptions="Center" Source="IconDelete.png" Grid.Row="1" Grid.Column="1"  HeightRequest="22" WidthRequest="22" />
+                                </Grid>
+
+                            </StackLayout>
+                        </Frame>
+
+                    </DataTemplate>
+                </CollectionView.ItemTemplate>
+            </CollectionView>
+        </StackLayout>
+    </ContentPage.Content>
 </ContentPage>

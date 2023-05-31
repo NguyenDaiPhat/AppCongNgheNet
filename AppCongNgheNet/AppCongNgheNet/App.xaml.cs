@@ -1,4 +1,5 @@
 ﻿using AppCongNgheNet.Databases;
+using AppCongNgheNet.Models;
 using AppCongNgheNet.Views;
 using System;
 using System.IO;
@@ -6,11 +7,14 @@ using System.Reflection;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
+[assembly: ExportFont("MaterialIcons.ttf", Alias = "Material")]
+[assembly: ExportFont("MaterialIconsTwoTone.otf", Alias = "TwoToneMaterial")]
 namespace AppCongNgheNet
 {
     public partial class App : Application
     {
         public static RuleDatabase Database = new RuleDatabase();
+        public static User User;
         public App()
         {
             InitializeComponent();
@@ -27,7 +31,9 @@ namespace AppCongNgheNet
             //    }
             //}
 
-            MainPage = new ChaptersPage();
+            //MainPage = new ChaptersPage();
+            MainPage = new NavigationPage(new MyFlyoutPage());
+            NavigationPage.SetHasNavigationBar(this, false);
         }
 
         protected override void OnStart()

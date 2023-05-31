@@ -13,29 +13,29 @@ namespace AppCongNgheNet.Views
 {
     public partial class ChaptersPage : ContentPage
     {
-        public ObservableCollection<User> Users { get; set; } = new ObservableCollection<User>();
         public ChaptersPage()
         {
             InitializeComponent();
+            //NavigationPage.SetHasBackButton(this, false);
         }
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-            collectionView.ItemsSource = await App.Database.GetUserAsync();
+            collectionView.ItemsSource = await App.Database.GetChapterAsync();
         }
 
-        User lastSelection;
+        Chapter lastSelection;
         void collectionView_SelectionChanged(System.Object sender, Xamarin.Forms.SelectionChangedEventArgs e)
         {
-            lastSelection = e.CurrentSelection[0] as User;
+            lastSelection = e.CurrentSelection[0] as Chapter;
         }
         async void Button_Clicked_1(System.Object sender, System.EventArgs e)
         {
             if (lastSelection != null)
             {
-                await App.Database.DeletePersonAsync(lastSelection);
+                await App.Database.DeleteChapterAsync(lastSelection);
 
-                collectionView.ItemsSource = await App.Database.GetUserAsync();
+                collectionView.ItemsSource = await App.Database.GetChapterAsync();
             }
         }
     }

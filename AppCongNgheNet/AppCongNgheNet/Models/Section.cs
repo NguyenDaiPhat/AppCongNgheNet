@@ -6,7 +6,7 @@ using System.Text;
 namespace AppCongNgheNet.Models
 {
     [Table("sections")]
-    public class Sections
+    public class Section
     {
         [AutoIncrement, PrimaryKey]
         public int ID { get; set; }
