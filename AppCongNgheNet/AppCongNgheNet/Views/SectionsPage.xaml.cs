@@ -15,6 +15,7 @@ namespace AppCongNgheNet.Views
     public partial class SectionsPage : ContentPage
     {
         private SectionsViewModel _sectionsViewModel;
+        private ToolbarItem addToolbarItem;
         private Article _article;
         public SectionsPage(Article article)
         {
@@ -22,6 +23,18 @@ namespace AppCongNgheNet.Views
             _sectionsViewModel = new SectionsViewModel();
             BindingContext = _sectionsViewModel;
             _article = article;
+            addToolbarItem = new ToolbarItem
+            {
+                IconImageSource = "IconAdd.png",
+                //Text = "Add",
+                Command = new Command(AddChapter_Clicked)
+            };
+            if (((App)Application.Current).IsAdmin) ToolbarItems.Add(addToolbarItem);
+        }
+        private async void AddChapter_Clicked()
+        {
+            // Điều hướng đến layout chỉ định
+            await Navigation.PushAsync(new PageAddSections());
         }
         protected override async void OnAppearing()
         {
