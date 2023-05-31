@@ -74,10 +74,22 @@ namespace AppCongNgheNet.Databases
             return _database.UpdateAsync(user);
         }
         //delete
-        public Task DeleteChapterAsync(Chapter chapter)
+        public async Task DeleteChapter(int chapterID)
         {
-            return _database.DeleteAsync(chapter);
+            // Xóa Chapter
+            await _database.DeleteAsync<Chapter>(chapterID);
         }
+        public async Task DeleteArticlesByChapterID(int chapterID)
+        {
+            // Xóa danh sách các Article có ChapterID tương ứng
+            await _database.Table<Article>().DeleteAsync(a => a.ChapterID == chapterID);
+        }
+        public async Task DeleteSectionsByArticleID(int articleID)
+        {
+            // Xóa danh sách các Section có ArticleID tương ứng
+            await _database.Table<Section>().DeleteAsync(a => a.ArticleID == articleID);
+        }
+
         public Task DeleteArticleAsync(Article article)
         {
             return _database.DeleteAsync(article);

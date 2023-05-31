@@ -26,7 +26,6 @@ namespace AppCongNgheNet
             //    using (MemoryStream memoryStream = new MemoryStream())
             //    {
             //        stream.CopyTo(memoryStream);
-
             //        File.WriteAllBytes(RuleDatabase.DbPath, memoryStream.ToArray());
             //    }
             //}

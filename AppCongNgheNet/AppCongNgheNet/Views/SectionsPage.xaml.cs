@@ -30,5 +30,10 @@ namespace AppCongNgheNet.Views
             sectionSelection = e.CurrentSelection[0] as Section;
             await Navigation.PushAsync(new DetailsPage(sectionSelection));
         }
+        private async void AddSection_Clicked(object sender, EventArgs e)
+        {
+            // Điều hướng đến layout chỉ định
+            await Navigation.PushAsync(new PageAddSections());
+        }
     }
 }

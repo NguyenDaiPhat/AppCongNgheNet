@@ -30,5 +30,10 @@ namespace AppCongNgheNet.Views
             articleSelection = e.CurrentSelection[0] as Article;
             await Navigation.PushAsync(new SectionsPage(articleSelection));
         }
+        private async void AddArticleToolbar_Clicked(object sender, EventArgs e)
+        {
+            // Điều hướng đến layout chỉ định
+            await Navigation.PushAsync(new PageAddArticles());
+        }
     }
 }

@@ -1,4 +1,5 @@
 ﻿using AppCongNgheNet.Models;
+using AppCongNgheNet.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
@@ -13,9 +14,12 @@ namespace AppCongNgheNet.Views
 {
     public partial class ChaptersPage : ContentPage
     {
+        private ChaptersViewModel chaptersViewModel;
         public ChaptersPage()
         {
             InitializeComponent();
+            chaptersViewModel = new ChaptersViewModel();
+            BindingContext = chaptersViewModel;
             //NavigationPage.SetHasBackButton(this, false);
         }
         protected override async void OnAppearing()
@@ -30,14 +34,31 @@ namespace AppCongNgheNet.Views
             chapterSelection = e.CurrentSelection[0] as Chapter;
             await Navigation.PushAsync(new ArticlesPage(chapterSelection));
         }
-        async void Button_Clicked_1(System.Object sender, System.EventArgs e)
-        {
-            if (chapterSelection != null)
-            {
-                await App.Database.DeleteChapterAsync(chapterSelection);
 
+        private void Button_Edit(object sender, EventArgs e)
+        {
+
+        }
+
+        private async void Button_Delete(object sender, EventArgs e)
+        {
+            // Lấy đối tượng Chapter từ CommandParameter
+            var button = (ImageButton)sender;
+            var chapter = button.CommandParameter as Chapter;
+            bool result = await DisplayAlert("Xác nhận", "Bạn có chắc muốn xóa?", "Đồng ý", "Hủy");
+            // Gọi Command trong ViewModel
+            if (result)
+            {
+                chaptersViewModel.DeleteCommand.Execute(chapter);
                 collectionView.ItemsSource = await App.Database.GetChapterAsync();
             }
         }
+
+        private async void AddChapter_Clicked(object sender, EventArgs e)
+        {
+            // Điều hướng đến layout chỉ định
+            await Navigation.PushAsync(new PageAddChapters());
+        }
+
     }
 }

@@ -1,0 +1,17 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="AppCongNgheNet.Views.PageAddArticles">
+    <ContentPage.Content>
+        <StackLayout Orientation="Vertical" Padding="10">
+            <StackLayout Orientation="Horizontal" Padding="5">
+                <Label Text="Điều số: "></Label>
+                <Entry Placeholder="Nhập thứ tự điều ..."></Entry>
+            </StackLayout>
+            <StackLayout Orientation="Horizontal" Padding="5">
+                <Label Text="Tên diều luật: "></Label>
+                <Entry Placeholder="Nhập tên điều luật ..."></Entry>
+            </StackLayout>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

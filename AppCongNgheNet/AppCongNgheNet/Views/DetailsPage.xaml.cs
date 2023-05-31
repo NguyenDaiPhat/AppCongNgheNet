@@ -24,7 +24,7 @@ namespace AppCongNgheNet.Views
         //    base.OnAppearing();
         //    collectionView.ItemsSource = await App.Database.GetSectionsByArticleSelected(_article.ID);
         //}
-        Article articleSelection;
+        //Article articleSelection;
         //async void collectionView_SelectionChanged(System.Object sender, Xamarin.Forms.SelectionChangedEventArgs e)
         //{
         //    articleSelection = e.CurrentSelection[0] as Article;
