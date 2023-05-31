@@ -91,9 +91,13 @@ namespace AppCongNgheNet.Databases
             return _database.DeleteAsync(user);
         }
         //query
-        //public Task<List<Person>> QuerySubscribedAsync()
-        //{
-        //    return _database.QueryAsync<Person>("SELECT * FROM Person WHERE Subscribed = true");
-        //}
+        public Task QueryAsync(string username, string password, string email, int mobie)
+        {
+            return _database.QueryAsync<User>("SELECT * FROM Person WHERE Subscribed = true");
+        }
+        public async Task<User> GetUserByUsername(string username)
+        {
+            return await _database.Table<User>().FirstOrDefaultAsync(u => u.UserName == username);
+        }
     }
 }

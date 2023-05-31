@@ -1,4 +1,5 @@
 ﻿using AppCongNgheNet.Databases;
+using AppCongNgheNet.Models;
 using AppCongNgheNet.Views;
 using System;
 using System.IO;
@@ -13,6 +14,7 @@ namespace AppCongNgheNet
     public partial class App : Application
     {
         public static RuleDatabase Database = new RuleDatabase();
+        public static User User;
         public App()
         {
             InitializeComponent();
@@ -45,6 +47,5 @@ namespace AppCongNgheNet
         protected override void OnResume()
         {
         }
-        public static bool IsUserLoggedIn { get; set; }
     }
 }

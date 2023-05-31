@@ -4,7 +4,7 @@
              x:Class="AppCongNgheNet.Views.ChaptersPage" Title="Trang chủ" Background="#444654">
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem IconImageSource="IconAdd.png"/>
+        <ToolbarItem IconImageSource="IconAdd.png" />
     </ContentPage.ToolbarItems>
     
     <ContentPage.Content>
@@ -26,8 +26,8 @@
             </Grid>
 
 
-            <Button Text="Delete Database"
-                    Clicked="Button_Clicked_1" />
+            <!--<Button Text="Delete Database"
+                    Clicked="Button_Clicked_1" />-->
             <CollectionView x:Name="collectionView" SelectionMode="Single" SelectionChanged="collectionView_SelectionChanged">
                 <CollectionView.ItemTemplate>
                     <DataTemplate>

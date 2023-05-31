@@ -5,8 +5,10 @@
     <ContentPage.Content>
         <StackLayout Padding="40" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
             <Image Source="IconLog.png" HeightRequest="180" WidthRequest="180"/>
-
+            
             <Entry x:Name="txtUsername" Placeholder="Tài khoản" TextColor="White" PlaceholderColor="Gray"></Entry>
+            <Entry x:Name="txtEmail" Placeholder="Email" TextColor="White" PlaceholderColor="Gray"></Entry>
+            <Entry x:Name="txtMobie" Placeholder="Mobie" TextColor="White" PlaceholderColor="Gray"></Entry>
             <Entry x:Name="txtPassword" Placeholder="Mật khẩu" IsPassword="True" TextColor="White" PlaceholderColor="Gray"></Entry>
             <Entry x:Name="txtPasswordConfirm" Placeholder="Xác nhận lại mật khẩu" IsPassword="True" TextColor="White" PlaceholderColor="Gray"></Entry>
             <Button
