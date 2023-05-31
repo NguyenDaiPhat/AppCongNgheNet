@@ -2,6 +2,7 @@
 using AppCongNgheNet.Models;
 using AppCongNgheNet.Views;
 using System;
+using System.ComponentModel;
 using System.IO;
 using System.Reflection;
 using Xamarin.Forms;
@@ -11,10 +12,31 @@ using Xamarin.Forms.Xaml;
 [assembly: ExportFont("MaterialIconsTwoTone.otf", Alias = "TwoToneMaterial")]
 namespace AppCongNgheNet
 {
-    public partial class App : Application
+    public partial class App : Application, INotifyPropertyChanged
     {
         public static RuleDatabase Database = new RuleDatabase();
         public static User User;
+        private bool isAdmin;
+
+        public bool IsAdmin
+        {
+            get { return isAdmin; }
+            set
+            {
+                if (isAdmin != value)
+                {
+                    isAdmin = value;
+                    OnPropertyChanged(nameof(IsAdmin));
+                }
+            }
+        }
+
+        public event PropertyChangedEventHandler PropertyChanged;
+
+        protected virtual void OnPropertyChanged(string propertyName)
+        {
+            PropertyChanged?.Invoke(this, new PropertyChangedEventArgs(propertyName));
+        }
         public App()
         {
             InitializeComponent();

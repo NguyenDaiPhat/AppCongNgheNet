@@ -15,12 +15,42 @@ namespace AppCongNgheNet.Views
     public partial class ChaptersPage : ContentPage
     {
         private ChaptersViewModel _chaptersViewModel;
+        private ToolbarItem logoutToolbarItem;
+        private ToolbarItem addToolbarItem;
         public ChaptersPage()
         {
             InitializeComponent();
             _chaptersViewModel = new ChaptersViewModel();
             BindingContext = _chaptersViewModel;
             //NavigationPage.SetHasBackButton(this, false);
+            logoutToolbarItem = new ToolbarItem
+            {
+                IconImageSource = "IconLogout.png",
+                //Text = "Add",
+                Command = new Command(LogoutButton_Clicked)
+            };
+            addToolbarItem = new ToolbarItem
+            {
+                IconImageSource = "IconAdd.png",
+                //Text = "Add",
+                Command = new Command(AddChapter_Clicked)
+            };
+            if (((App)Application.Current).IsAdmin) ToolbarItems.Add(addToolbarItem);
+            if (App.User != null) ToolbarItems.Add(logoutToolbarItem);
+            
+        }
+        private void LogoutButton_Clicked()
+        {
+            // Xử lý logic khi nhấp vào nút Add
+            if (((App)Application.Current).IsAdmin) ToolbarItems.Remove(addToolbarItem);
+            App.User = null;
+            ((App)Application.Current).IsAdmin = false;
+            ToolbarItems.Remove(logoutToolbarItem);
+        }
+        private async void AddChapter_Clicked()
+        {
+            // Điều hướng đến layout chỉ định
+            await Navigation.PushAsync(new PageAddChapters());
         }
         protected override async void OnAppearing()
         {
@@ -76,12 +106,6 @@ namespace AppCongNgheNet.Views
                 _chaptersViewModel.DeleteCommand.Execute(chapter);
                 collectionView.ItemsSource = await App.Database.GetChapterAsync();
             }
-        }
-
-        private async void AddChapter_Clicked(object sender, EventArgs e)
-        {
-            // Điều hướng đến layout chỉ định
-            await Navigation.PushAsync(new PageAddChapters());
         }
 
     }

@@ -13,29 +13,12 @@ namespace AppCongNgheNet.Views
 	[XamlCompilation(XamlCompilationOptions.Compile)]
 	public partial class LoginPage : ContentPage
 	{
-		public LoginPage ()
+        public LoginPage ()
 		{
 			InitializeComponent ();
-            //NavigationPage.SetHasBackButton(this, false);
         }
         private async void Button_Clicked(object sender, EventArgs e)
         {
-            //if (txtUsername.Text == "admin" && txtPassword.Text == "123")
-            //{
-
-
-            //    // Lưu thông tin đăng nhập
-            //    App.IsUserLoggedIn = true;
-
-            //    // Chuyển hướng đến trang chủ
-            //    await Navigation.PushAsync(new MyFlyoutPage());
-            //}
-            //else
-            //{
-            //    DisplayAlert("Thông báo", "Tài khoản hoặc mật khẩu sai", "OK");
-            //}
-
-            // Lấy thông tin đăng nhập từ các trường nhập liệu
             string username = txtUsername.Text;
             string password = txtPassword.Text;
 
@@ -57,8 +40,12 @@ namespace AppCongNgheNet.Views
                 return;
             }
             // Đăng nhập thành công
-            await Navigation.PushAsync(new MyFlyoutPage());
             App.User = user;
+            // Xử lý logic đăng nhập
+            bool isAdmin = (user.Role == "admin"); // Kiểm tra role của user
+            // Cập nhật giá trị IsAdmin trong App
+            ((App)Application.Current).IsAdmin = isAdmin;
+            await Navigation.PushAsync(new MyFlyoutPage());
         }
 
         private void TapGestureRecognizer_Tapped(object sender, EventArgs e)

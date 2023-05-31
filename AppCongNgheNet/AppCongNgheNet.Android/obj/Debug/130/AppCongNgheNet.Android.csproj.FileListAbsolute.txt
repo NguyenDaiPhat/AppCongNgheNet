@@ -655,3 +655,4 @@ D:\PHENIKAA\Ki4\CongNgheNet\AppCongNgheNet\AppCongNgheNet\AppCongNgheNet.Android
 D:\PHENIKAA\Ki4\CongNgheNet\AppCongNgheNet\AppCongNgheNet\AppCongNgheNet.Android\obj\Debug\130\res\drawable\business.png
 D:\PHENIKAA\Ki4\CongNgheNet\AppCongNgheNet\AppCongNgheNet\AppCongNgheNet.Android\obj\Debug\130\res\drawable\user.png
 D:\PHENIKAA\Ki4\CongNgheNet\AppCongNgheNet\AppCongNgheNet\AppCongNgheNet.Android\obj\Debug\130\res\drawable\icondetail.png
+D:\PHENIKAA\Ki4\CongNgheNet\AppCongNgheNet\AppCongNgheNet\AppCongNgheNet.Android\obj\Debug\130\res\drawable\iconlogout.png

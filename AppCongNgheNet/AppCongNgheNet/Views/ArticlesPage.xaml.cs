@@ -16,13 +16,26 @@ namespace AppCongNgheNet.Views
 	{
 		Chapter _chapter;
         private ArticlesViewModel _articlesViewModel;
+        private ToolbarItem addToolbarItem;
         public ArticlesPage (Chapter chapter)
 		{
 			InitializeComponent ();
             _articlesViewModel = new ArticlesViewModel();
             BindingContext = _articlesViewModel;
             _chapter = chapter;
-		}
+            addToolbarItem = new ToolbarItem
+            {
+                IconImageSource = "IconAdd.png",
+                //Text = "Add",
+                Command = new Command(AddChapter_Clicked)
+            };
+            if (((App)Application.Current).IsAdmin) ToolbarItems.Add(addToolbarItem);
+        }
+        private async void AddChapter_Clicked()
+        {
+            // Điều hướng đến layout chỉ định
+            await Navigation.PushAsync(new PageAddArticles());
+        }
         protected override async void OnAppearing()
         {
             base.OnAppearing();
