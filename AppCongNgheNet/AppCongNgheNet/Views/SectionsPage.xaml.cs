@@ -1,4 +1,5 @@
 ﻿using AppCongNgheNet.Models;
+using AppCongNgheNet.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -13,10 +14,13 @@ namespace AppCongNgheNet.Views
     [XamlCompilation(XamlCompilationOptions.Compile)]
     public partial class SectionsPage : ContentPage
     {
+        private SectionsViewModel _sectionsViewModel;
         private Article _article;
         public SectionsPage(Article article)
         {
             InitializeComponent();
+            _sectionsViewModel = new SectionsViewModel();
+            BindingContext = _sectionsViewModel;
             _article = article;
         }
         protected override async void OnAppearing()
@@ -29,6 +33,19 @@ namespace AppCongNgheNet.Views
         {
             sectionSelection = e.CurrentSelection[0] as Section;
             await Navigation.PushAsync(new DetailsPage(sectionSelection));
+        }
+        private async void Button_Delete(object sender, EventArgs e)
+        {
+            // Lấy đối tượng Chapter từ CommandParameter
+            var button = (ImageButton)sender;
+            var section = button.CommandParameter as Section;
+            bool result = await DisplayAlert("Xác nhận", "Bạn có chắc muốn xóa?", "Đồng ý", "Hủy");
+            // Gọi Command trong ViewModel
+            if (result)
+            {
+                _sectionsViewModel.DeleteCommand.Execute(section);
+                collectionView.ItemsSource = await App.Database.GetSectionsByArticleSelected(_article.ID + 5);
+            }
         }
         private async void AddSection_Clicked(object sender, EventArgs e)
         {

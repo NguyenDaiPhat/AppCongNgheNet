@@ -76,31 +76,28 @@ namespace AppCongNgheNet.Databases
         //delete
         public async Task DeleteChapter(int chapterID)
         {
-            // Xóa Chapter
+            // Xóa Chapter (xóa luôn article và section bên trong)
+            List<Article> articlesToDelete = await _database.Table<Article>().Where(a => a.ChapterID == chapterID).ToListAsync();
+            foreach (Article article in articlesToDelete)
+            {
+                // Xóa Section có ArticleID tương ứng
+                int t = article.ID + 5;
+                await _database.Table<Section>().DeleteAsync(s => s.ArticleID == t);
+            }
             await _database.DeleteAsync<Chapter>(chapterID);
-        }
-        public async Task DeleteArticlesByChapterID(int chapterID)
-        {
-            // Xóa danh sách các Article có ChapterID tương ứng
             await _database.Table<Article>().DeleteAsync(a => a.ChapterID == chapterID);
         }
-        public async Task DeleteSectionsByArticleID(int articleID)
+        public async Task DeleteArticle(int articleID)
         {
-            // Xóa danh sách các Section có ArticleID tương ứng
-            await _database.Table<Section>().DeleteAsync(a => a.ArticleID == articleID);
+            // Xóa Article ( xóa section bên trong)
+            await _database.DeleteAsync<Article>(articleID);
+            int t = articleID + 5;
+            await _database.Table<Section>().DeleteAsync(a => a.ArticleID == t);
         }
-
-        public Task DeleteArticleAsync(Article article)
+        public async Task DeleteSection(int sectionID)
         {
-            return _database.DeleteAsync(article);
-        }
-        public Task DeleteSectionAsync(Section section)
-        {
-            return _database.DeleteAsync(section);
-        }
-        public Task DeleteUserAsync(User user)
-        {
-            return _database.DeleteAsync(user);
+            // Xóa Section 
+            await _database.DeleteAsync<Section>(sectionID);
         }
         //query
         public Task QueryAsync(string username, string password, string email, int mobie)

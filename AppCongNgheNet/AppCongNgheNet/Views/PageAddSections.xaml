@@ -4,25 +4,85 @@
              x:Class="AppCongNgheNet.Views.PageAddSections">
     <ContentPage.Content>
         <StackLayout Orientation="Vertical" Padding="10">
-            <StackLayout Orientation="Horizontal" Padding="5">
-                <Label Text="Nội dung số: "></Label>
-                <Entry Placeholder="Nhập thứ tự nội dung ..."></Entry>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal" Padding="5">
-                <Label Text="Nội dung: "></Label>
-                <Entry Placeholder="Nhập nội dung luật ..."></Entry>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal" Padding="5">
-                <Label Text="Mức xử phạt:"></Label>
-                <StackLayout Orientation="Vertical">
-                    <StackLayout Orientation="Horizontal" Padding="5">
-                        <Label Text="Lớn nhất: "></Label>
-                        <Entry Placeholder="..."></Entry>
+            <StackLayout Orientation="Vertical" Padding="10">
+                <Label Text="THÊM NỘI DUNG MỚI"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   Padding="5"
+                   TextColor="Black"
+                   FontSize="Medium"></Label>
+                <Label Text="ID"
+                   Padding="5"
+                   TextColor="Black"
+                   FontSize="Medium"></Label>
+                <Entry IsTextPredictionEnabled="False"
+                   IsSpellCheckEnabled="False"
+                   Keyboard="Numeric"></Entry>
+                <Label Text="Tittle"
+                   Padding="5"
+                   TextColor="Black"
+                   FontSize="Medium"></Label>
+                <Entry IsTextPredictionEnabled="False"
+                   IsSpellCheckEnabled="False"
+                   Keyboard="Text"></Entry>
+                <Label Text="Content"
+                   Padding="5"
+                   TextColor="Black"
+                   FontSize="Medium"></Label>
+                <Entry IsTextPredictionEnabled="False"
+                   IsSpellCheckEnabled="False"
+                   Keyboard="Text"></Entry>
+                <Label Text="Sanction level"
+                   Padding="5"
+                   TextColor="Black"
+                   FontSize="Medium"></Label>
+                <StackLayout Orientation="Horizontal">
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Min"
+                        Padding="5"
+                        TextColor="Black"
+                        FontSize="Medium"></Label>
+                        <Entry IsTextPredictionEnabled="False"
+                        IsSpellCheckEnabled="False"
+                        Keyboard="Text"></Entry>
                     </StackLayout>
-                    <StackLayout Orientation="Horizontal" Padding="5">
-                        <Label Text="Nhỏ nhất: "></Label>
-                        <Entry Placeholder="..."></Entry>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Max"
+                        Padding="5"
+                        TextColor="Black"
+                        FontSize="Medium"></Label>
+                        <Entry IsTextPredictionEnabled="False"
+                        IsSpellCheckEnabled="False"
+                        Keyboard="Text"></Entry>
                     </StackLayout>
+                    <StackLayout Orientation="Horizontal">
+                        <Label Text="Avg"
+                        Padding="5"
+                        TextColor="Black"
+                        FontSize="Medium"></Label>
+                        <Entry IsTextPredictionEnabled="False"
+                        IsSpellCheckEnabled="False"
+                        Keyboard="Text"></Entry>
+                    </StackLayout>
+                </StackLayout>
+                <Label Text="Decree"
+                   Padding="5"
+                   TextColor="Black"
+                   FontSize="Medium"></Label>
+                <Entry IsTextPredictionEnabled="False"
+                   IsSpellCheckEnabled="False"
+                   Keyboard="Text"></Entry>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="30">
+                    <Button BorderColor="Pink" 
+                        BackgroundColor="Pink"
+                        CornerRadius="10"
+                        WidthRequest="150"
+                        Text="CANCEL"></Button>
+                    <Button BorderColor="Pink" 
+                        BackgroundColor="Pink"
+                        CornerRadius="10"
+                        WidthRequest="150"
+                        Text="SAVE"></Button>
                 </StackLayout>
             </StackLayout>
         </StackLayout>

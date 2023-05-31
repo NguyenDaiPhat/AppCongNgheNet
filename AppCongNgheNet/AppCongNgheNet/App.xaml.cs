@@ -20,15 +20,15 @@ namespace AppCongNgheNet
             InitializeComponent();
 
             // TODO Only do this when app first runs
-            //var assembly = IntrospectionExtensions.GetTypeInfo(typeof(App)).Assembly;
-            //using (Stream stream = assembly.GetManifestResourceStream("AppCongNgheNet.Databases.net03.db"))
-            //{
-            //    using (MemoryStream memoryStream = new MemoryStream())
-            //    {
-            //        stream.CopyTo(memoryStream);
-            //        File.WriteAllBytes(RuleDatabase.DbPath, memoryStream.ToArray());
-            //    }
-            //}
+            var assembly = IntrospectionExtensions.GetTypeInfo(typeof(App)).Assembly;
+            using (Stream stream = assembly.GetManifestResourceStream("AppCongNgheNet.Databases.net03.db"))
+            {
+                using (MemoryStream memoryStream = new MemoryStream())
+                {
+                    stream.CopyTo(memoryStream);
+                    File.WriteAllBytes(RuleDatabase.DbPath, memoryStream.ToArray());
+                }
+            }
 
             //MainPage = new ChaptersPage();
             MainPage = new NavigationPage(new MyFlyoutPage());

@@ -47,7 +47,7 @@
                                     <Label TextColor="Black" LineBreakMode="TailTruncation" MaxLines="3" FontSize="18" Text="{Binding Title}" Grid.Row="0" Grid.Column="0" Grid.RowSpan="3"  />
                                     <ImageButton BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="Center" Source="IconDetail.png" Grid.Row="0" Grid.Column="1" HeightRequest="20" WidthRequest="20"/>
                                     <ImageButton BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="Center" Source="IconEdit.png" Grid.Row="1" Grid.Column="1" HeightRequest="17" WidthRequest="17"/>
-                                    <ImageButton BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="Center" Source="IconDelete.png" Grid.Row="2" Grid.Column="1"  HeightRequest="18" WidthRequest="19" />
+                                    <ImageButton Command="{Binding DeleteCommand}" CommandParameter="{Binding .}" Clicked="Button_Delete" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="Center" Source="IconDelete.png" Grid.Row="2" Grid.Column="1"  HeightRequest="18" WidthRequest="19" />
                                 </Grid>
 
                             </StackLayout>

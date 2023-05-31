@@ -27,10 +27,7 @@ namespace AppCongNgheNet.ViewModels
                 // Thực hiện xóa Chapter và danh sách các Article tương ứng
                 int chapterIDToDelete = chapter.ID;
                 await App.Database.DeleteChapter(chapterIDToDelete);
-                await App.Database.DeleteArticlesByChapterID(chapterIDToDelete);
             }
         }
-
-
     }
 }

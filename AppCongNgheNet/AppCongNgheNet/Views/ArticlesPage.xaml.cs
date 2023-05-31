@@ -1,4 +1,5 @@
 ﻿using AppCongNgheNet.Models;
+using AppCongNgheNet.ViewModels;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -14,10 +15,13 @@ namespace AppCongNgheNet.Views
 	public partial class ArticlesPage : ContentPage
 	{
 		Chapter _chapter;
-		public ArticlesPage (Chapter chapter)
+        private ArticlesViewModel _articlesViewModel;
+        public ArticlesPage (Chapter chapter)
 		{
 			InitializeComponent ();
-			_chapter = chapter;
+            _articlesViewModel = new ArticlesViewModel();
+            BindingContext = _articlesViewModel;
+            _chapter = chapter;
 		}
         protected override async void OnAppearing()
         {
@@ -29,6 +33,20 @@ namespace AppCongNgheNet.Views
         {
             articleSelection = e.CurrentSelection[0] as Article;
             await Navigation.PushAsync(new SectionsPage(articleSelection));
+        }
+
+        private async void Button_Delete(object sender, EventArgs e)
+        {
+            // Lấy đối tượng Chapter từ CommandParameter
+            var button = (ImageButton)sender;
+            var article = button.CommandParameter as Article;
+            bool result = await DisplayAlert("Xác nhận", "Bạn có chắc muốn xóa?", "Đồng ý", "Hủy");
+            // Gọi Command trong ViewModel
+            if (result)
+            {
+                _articlesViewModel.DeleteCommand.Execute(article);
+                collectionView.ItemsSource = await App.Database.GetArticlesByChapterSelected(_chapter.ID);
+            }
         }
         private async void AddArticleToolbar_Clicked(object sender, EventArgs e)
         {

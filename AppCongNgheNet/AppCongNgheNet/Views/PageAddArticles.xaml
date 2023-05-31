@@ -4,13 +4,46 @@
              x:Class="AppCongNgheNet.Views.PageAddArticles">
     <ContentPage.Content>
         <StackLayout Orientation="Vertical" Padding="10">
-            <StackLayout Orientation="Horizontal" Padding="5">
-                <Label Text="Điều số: "></Label>
-                <Entry Placeholder="Nhập thứ tự điều ..."></Entry>
-            </StackLayout>
-            <StackLayout Orientation="Horizontal" Padding="5">
-                <Label Text="Tên diều luật: "></Label>
-                <Entry Placeholder="Nhập tên điều luật ..."></Entry>
+            <StackLayout Orientation="Vertical" Padding="10">
+                <Label Text="THÊM ĐIỀU LUẬT MỚI"
+                   VerticalOptions="Center"
+                   HorizontalOptions="Center"
+                   Padding="5"
+                   TextColor="Black"
+                   FontSize="Medium"></Label>
+                <Label Text="ID"
+                   Padding="5"
+                   TextColor="Black"
+                   FontSize="Medium"></Label>
+                <Entry IsTextPredictionEnabled="False"
+                   IsSpellCheckEnabled="False"
+                   Keyboard="Numeric"></Entry>
+                <Label Text="Tittle"
+                   Padding="5"
+                   TextColor="Black"
+                   FontSize="Medium"></Label>
+                <Entry IsTextPredictionEnabled="False"
+                   IsSpellCheckEnabled="False"
+                   Keyboard="Text"></Entry>
+                <Label Text="Content"
+                   Padding="5"
+                   TextColor="Black"
+                   FontSize="Medium"></Label>
+                <Entry IsTextPredictionEnabled="False"
+                   IsSpellCheckEnabled="False"
+                   Keyboard="Text"></Entry>
+                <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="30">
+                    <Button BorderColor="Pink" 
+                        BackgroundColor="Pink"
+                        CornerRadius="10"
+                        WidthRequest="150"
+                        Text="CANCEL"></Button>
+                    <Button BorderColor="Pink" 
+                        BackgroundColor="Pink"
+                        CornerRadius="10"
+                        WidthRequest="150"
+                        Text="SAVE"></Button>
+                </StackLayout>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>
