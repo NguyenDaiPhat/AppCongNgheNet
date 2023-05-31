@@ -99,5 +99,13 @@ namespace AppCongNgheNet.Databases
         {
             return await _database.Table<User>().FirstOrDefaultAsync(u => u.UserName == username);
         }
+        public async Task<List<Article>> GetArticlesByChapterSelected(int chapterID)
+        {
+            return await _database.Table<Article>().Where(a => a.ChapterID == chapterID).ToListAsync();
+        }
+        public async Task<List<Section>> GetSectionsByArticleSelected(int articleID)
+        {
+            return await _database.Table<Section>().Where(a => a.ArticleID == articleID).ToListAsync();
+        }
     }
 }

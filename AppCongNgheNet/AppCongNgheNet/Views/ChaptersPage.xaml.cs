@@ -24,16 +24,17 @@ namespace AppCongNgheNet.Views
             collectionView.ItemsSource = await App.Database.GetChapterAsync();
         }
 
-        Chapter lastSelection;
-        void collectionView_SelectionChanged(System.Object sender, Xamarin.Forms.SelectionChangedEventArgs e)
+        Chapter chapterSelection;
+        async void collectionView_SelectionChanged(System.Object sender, Xamarin.Forms.SelectionChangedEventArgs e)
         {
-            lastSelection = e.CurrentSelection[0] as Chapter;
+            chapterSelection = e.CurrentSelection[0] as Chapter;
+            await Navigation.PushAsync(new ArticlesPage(chapterSelection));
         }
         async void Button_Clicked_1(System.Object sender, System.EventArgs e)
         {
-            if (lastSelection != null)
+            if (chapterSelection != null)
             {
-                await App.Database.DeleteChapterAsync(lastSelection);
+                await App.Database.DeleteChapterAsync(chapterSelection);
 
                 collectionView.ItemsSource = await App.Database.GetChapterAsync();
             }
