@@ -5,17 +5,17 @@
     <ContentPage.Content>
         <StackLayout Padding="40" HorizontalOptions="FillAndExpand" VerticalOptions="Center">
             <Image Source="IconLog.png" HeightRequest="180" WidthRequest="180"/>
-            
-            <Entry x:Name="txtUsername" Placeholder="Tài khoản" TextColor="White" PlaceholderColor="Gray"></Entry>
-            <Entry x:Name="txtEmail" Placeholder="Email" TextColor="White" PlaceholderColor="Gray"></Entry>
-            <Entry x:Name="txtMobie" Placeholder="Mobie" TextColor="White" PlaceholderColor="Gray"></Entry>
-            <Entry x:Name="txtPassword" Placeholder="Mật khẩu" IsPassword="True" TextColor="White" PlaceholderColor="Gray"></Entry>
-            <Entry x:Name="txtPasswordConfirm" Placeholder="Xác nhận lại mật khẩu" IsPassword="True" TextColor="White" PlaceholderColor="Gray"></Entry>
+
+            <Entry x:Name="txtUsername" Placeholder="Tài khoản" TextColor="Black" PlaceholderColor="Gray"></Entry>
+            <Entry x:Name="txtEmail" Placeholder="Email" TextColor="Black" PlaceholderColor="Gray"></Entry>
+            <Entry x:Name="txtMobie" Placeholder="Mobie" TextColor="Black" PlaceholderColor="Gray"></Entry>
+            <Entry x:Name="txtPassword" Placeholder="Mật khẩu" IsPassword="True" TextColor="Black" PlaceholderColor="Gray"></Entry>
+            <Entry x:Name="txtPasswordConfirm" Placeholder="Xác nhận lại mật khẩu" IsPassword="True" TextColor="Black" PlaceholderColor="Gray"></Entry>
             <Button
                 VerticalOptions="Center"
                 Text="Đăng ký"
-                TextColor="White"
-                BackgroundColor="Transparent"
+                TextColor="Black"
+                BackgroundColor="LightPink"
                 BorderColor="Pink"
                 BorderWidth="1.5"
                 CornerRadius="50"

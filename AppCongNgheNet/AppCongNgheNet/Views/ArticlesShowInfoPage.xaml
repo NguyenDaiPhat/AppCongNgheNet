@@ -1,14 +1,25 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppCongNgheNet.Views.ArticlesShowInfoPage">
+             BackgroundColor="#C3E4FD"
+             x:Class="AppCongNgheNet.Views.ArticlesShowInfoPage" Title="Thông tin điều">
     <ContentPage.Content>
         <StackLayout Orientation="Vertical" Padding="10">
-            <Label x:Name="txtChapter" />
-            <Label x:Name="txtTitle" />
-            <Label x:Name="txtDecree" />
-            <Label x:Name="txtCreateTime" />
-            <Label x:Name="txtUpdateTime" />
+            <Label x:Name="txtChapter" 
+                   TextColor="Black"
+                   FontSize="Medium"/>
+            <Label x:Name="txtTitle"
+                   TextColor="Black"
+                   FontSize="Medium"/>
+            <Label x:Name="txtDecree"
+                   TextColor="Black"
+                   FontSize="Medium"/>
+            <Label x:Name="txtCreateTime" 
+                   TextColor="Black"
+                   FontSize="Small"/>
+            <Label x:Name="txtUpdateTime" 
+                   TextColor="Black"
+                   FontSize="Small"/>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

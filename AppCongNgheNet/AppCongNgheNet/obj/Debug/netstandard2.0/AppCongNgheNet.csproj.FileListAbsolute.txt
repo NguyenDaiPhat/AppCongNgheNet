@@ -26,3 +26,31 @@ D:\PHENIKAA\Ki4\CongNgheNet\AppCongNgheNet\AppCongNgheNet\AppCongNgheNet\obj\Deb
 D:\PHENIKAA\Ki4\CongNgheNet\AppCongNgheNet\AppCongNgheNet\AppCongNgheNet\obj\Debug\netstandard2.0\Views\ArticlesShowInfoPage.xaml.g.cs
 D:\PHENIKAA\Ki4\CongNgheNet\AppCongNgheNet\AppCongNgheNet\AppCongNgheNet\obj\Debug\netstandard2.0\Views\ChaptersShowInfoPage.xaml.g.cs
 D:\PHENIKAA\Ki4\CongNgheNet\AppCongNgheNet\AppCongNgheNet\AppCongNgheNet\obj\Debug\netstandard2.0\Views\SectionsShowInfo.xaml.g.cs
+D:\Giáo trình\Công nghệ .net\App\AppCongNgheNet\AppCongNgheNet\bin\Debug\netstandard2.0\AppCongNgheNet.deps.json
+D:\Giáo trình\Công nghệ .net\App\AppCongNgheNet\AppCongNgheNet\bin\Debug\netstandard2.0\AppCongNgheNet.dll
+D:\Giáo trình\Công nghệ .net\App\AppCongNgheNet\AppCongNgheNet\bin\Debug\netstandard2.0\ref\AppCongNgheNet.dll
+D:\Giáo trình\Công nghệ .net\App\AppCongNgheNet\AppCongNgheNet\bin\Debug\netstandard2.0\AppCongNgheNet.pdb
+D:\Giáo trình\Công nghệ .net\App\AppCongNgheNet\AppCongNgheNet\obj\Debug\netstandard2.0\AppCongNgheNet.csproj.AssemblyReference.cache
+D:\Giáo trình\Công nghệ .net\App\AppCongNgheNet\AppCongNgheNet\obj\Debug\netstandard2.0\AppCongNgheNet.GeneratedMSBuildEditorConfig.editorconfig
+D:\Giáo trình\Công nghệ .net\App\AppCongNgheNet\AppCongNgheNet\obj\Debug\netstandard2.0\App.xaml.g.cs
+D:\Giáo trình\Công nghệ .net\App\AppCongNgheNet\AppCongNgheNet\obj\Debug\netstandard2.0\Views\ArticlesPage.xaml.g.cs
+D:\Giáo trình\Công nghệ .net\App\AppCongNgheNet\AppCongNgheNet\obj\Debug\netstandard2.0\Views\ArticlesShowInfoPage.xaml.g.cs
+D:\Giáo trình\Công nghệ .net\App\AppCongNgheNet\AppCongNgheNet\obj\Debug\netstandard2.0\Views\ChaptersPage.xaml.g.cs
+D:\Giáo trình\Công nghệ .net\App\AppCongNgheNet\AppCongNgheNet\obj\Debug\netstandard2.0\Views\ChaptersShowInfoPage.xaml.g.cs
+D:\Giáo trình\Công nghệ .net\App\AppCongNgheNet\AppCongNgheNet\obj\Debug\netstandard2.0\Views\InfomationPage.xaml.g.cs
+D:\Giáo trình\Công nghệ .net\App\AppCongNgheNet\AppCongNgheNet\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
+D:\Giáo trình\Công nghệ .net\App\AppCongNgheNet\AppCongNgheNet\obj\Debug\netstandard2.0\Views\MyFlyoutPage.xaml.g.cs
+D:\Giáo trình\Công nghệ .net\App\AppCongNgheNet\AppCongNgheNet\obj\Debug\netstandard2.0\Views\MyFlyoutPageFlyout.xaml.g.cs
+D:\Giáo trình\Công nghệ .net\App\AppCongNgheNet\AppCongNgheNet\obj\Debug\netstandard2.0\Views\PageAddArticles.xaml.g.cs
+D:\Giáo trình\Công nghệ .net\App\AppCongNgheNet\AppCongNgheNet\obj\Debug\netstandard2.0\Views\PageAddChapters.xaml.g.cs
+D:\Giáo trình\Công nghệ .net\App\AppCongNgheNet\AppCongNgheNet\obj\Debug\netstandard2.0\Views\PageAddSections.xaml.g.cs
+D:\Giáo trình\Công nghệ .net\App\AppCongNgheNet\AppCongNgheNet\obj\Debug\netstandard2.0\Views\RegisterPage.xaml.g.cs
+D:\Giáo trình\Công nghệ .net\App\AppCongNgheNet\AppCongNgheNet\obj\Debug\netstandard2.0\Views\SectionsPage.xaml.g.cs
+D:\Giáo trình\Công nghệ .net\App\AppCongNgheNet\AppCongNgheNet\obj\Debug\netstandard2.0\Views\SectionsShowInfo.xaml.g.cs
+D:\Giáo trình\Công nghệ .net\App\AppCongNgheNet\AppCongNgheNet\obj\Debug\netstandard2.0\AppCongNgheNet.AssemblyInfoInputs.cache
+D:\Giáo trình\Công nghệ .net\App\AppCongNgheNet\AppCongNgheNet\obj\Debug\netstandard2.0\AppCongNgheNet.AssemblyInfo.cs
+D:\Giáo trình\Công nghệ .net\App\AppCongNgheNet\AppCongNgheNet\obj\Debug\netstandard2.0\AppCongNgheNet.csproj.CoreCompileInputs.cache
+D:\Giáo trình\Công nghệ .net\App\AppCongNgheNet\AppCongNgheNet\obj\Debug\netstandard2.0\XamlC.stamp
+D:\Giáo trình\Công nghệ .net\App\AppCongNgheNet\AppCongNgheNet\obj\Debug\netstandard2.0\AppCongNgheNet.dll
+D:\Giáo trình\Công nghệ .net\App\AppCongNgheNet\AppCongNgheNet\obj\Debug\netstandard2.0\refint\AppCongNgheNet.dll
+D:\Giáo trình\Công nghệ .net\App\AppCongNgheNet\AppCongNgheNet\obj\Debug\netstandard2.0\AppCongNgheNet.pdb
