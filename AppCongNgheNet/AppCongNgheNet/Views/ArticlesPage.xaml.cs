@@ -78,5 +78,11 @@ namespace AppCongNgheNet.Views
             var article = button.CommandParameter as Article;
             await Navigation.PushAsync(new ArticlesShowInfoPage(article, _chapter));
         }
+        private async void Button_Edit(object sender, EventArgs e)
+        {
+            var button = (ImageButton)sender;
+            var article = button.CommandParameter as Article;
+            await Navigation.PushAsync(new PageAddArticles(article, _chapter));
+        }
     }
 }

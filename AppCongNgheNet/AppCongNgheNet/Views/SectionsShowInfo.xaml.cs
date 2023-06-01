@@ -23,9 +23,9 @@ namespace AppCongNgheNet.Views
             txtTitle.Text = section.Title;
             txtContent1.Text = section.Content;
             //txtMinMax.IsVisible = (section.Min.ToString() != "NA");
-            txtMinMax.Text = "Mức xử phạt từ " + section.Min.ToString() + " đến " + section.Max.ToString();
+            txtMinMax.Text = "Mức xử phạt từ " + section.Min.ToString() + " tr đến " + section.Max.ToString()+ " tr";
             //txtAvg.IsVisible = (section.Avg.ToString() != "NA");
-            txtAvg.Text = "Mức xử phạt trung bình: " + section.Avg.ToString();
+            txtAvg.Text = "Mức xử phạt trung bình: " + section.Avg.ToString() + " tr";
             txtDecree.Text = "Nghị định số " + section.DecreeID.ToString();
             txtCreateTime.Text = "Thời gian tạo: " + section.CreateTime;
             txtUpdateTime.Text = "Thời gian cập nhật: " + section.UpdateTime;

@@ -60,12 +60,12 @@ namespace AppCongNgheNet.Views
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-            //if (_searchText != null)
-            //{
-            //    search.Text = _searchText;
-            //    collectionView.ItemsSource = await App.Database.SearchSections(_searchText);
-            //}
-            //else
+            if (_searchText != null)
+            {
+                search.Text = _searchText;
+                collectionView.ItemsSource = await App.Database.SearchSections(_searchText);
+            }
+            else
                 collectionView.ItemsSource = await App.Database.GetSectionsByArticleSelected(_article.ID + 5);
         }
         Section sectionSelection;

@@ -48,13 +48,13 @@ namespace AppCongNgheNet.Databases
 
             return searchResults;
         }
-        public async Task<List<Section>> SearchSectionsAndArticleID(string searchText, int articleID)
-        {
-            string query = "SELECT * FROM Section WHERE ArticleID = ? AND Content LIKE ?";
-            List<Section> searchResults = await _database.QueryAsync<Section>(query, articleID, $"%{searchText}%");
+        //public async Task<List<Section>> SearchSectionsAndArticleID(string searchText, int articleID)
+        //{
+        //    string query = "SELECT * FROM Section WHERE ArticleID = ? AND Content LIKE ?";
+        //    List<Section> searchResults = await _database.QueryAsync<Section>(query, articleID, $"%{searchText}%");
 
-            return searchResults;
-        }
+        //    return searchResults;
+        //}
 
 
 

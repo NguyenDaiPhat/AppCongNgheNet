@@ -47,14 +47,23 @@
                                     <ImageButton Command="{Binding ShowInfoCommand}" CommandParameter="{Binding .}" Clicked="Button_ShowInfo" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="Center" Source="IconDetail.png" Grid.Row="0" Grid.Column="1" HeightRequest="20" WidthRequest="20"/>
                                     <ImageButton IsVisible="{Binding IsAdmin, Source={x:Static Application.Current}}" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="Center" Source="IconEdit.png" Grid.Row="1" Grid.Column="1" HeightRequest="17" WidthRequest="17"/>
                                     <ImageButton IsVisible="{Binding IsAdmin, Source={x:Static Application.Current}}" Command="{Binding DeleteCommand}" CommandParameter="{Binding .}" Clicked="Button_Delete" BackgroundColor="Transparent" HorizontalOptions="Center" VerticalOptions="Center" Source="IconDelete.png" Grid.Row="2" Grid.Column="1"  HeightRequest="19" WidthRequest="19" />
-                                    <Label TextColor="Black" FontSize="14" Grid.Row="3" Grid.Column="0">
-                                        <Label.Text>
-                                            <Binding Path="Min" StringFormat="Khung xử phạt: {0} - " />
-                                        </Label.Text>
+                                    <Label BackgroundColor="Pink" Padding="10, 0, 0, 0" TextColor="Black" FontSize="14" Grid.Row="3" Grid.Column="0">
                                         <Label.FormattedText>
                                             <FormattedString>
-                                                <Span Text="{Binding Path=Min, StringFormat='{0}'}" />
-                                                <Span Text="{Binding Path=Max, StringFormat='{0}'}" />
+                                                <Span Text="Khung xử phạt: " />
+                                                <Span Text="{Binding Min}" />
+                                                <Span Text=" tr - " />
+                                                <Span Text="{Binding Max}" />
+                                                <Span Text=" tr" />
+                                            </FormattedString>
+                                        </Label.FormattedText>
+                                    </Label>
+                                    <Label BackgroundColor="Pink" Padding="10, 0, 0, 0" TextColor="Black" FontSize="14" Grid.Row="4" Grid.Column="0">
+                                        <Label.FormattedText>
+                                            <FormattedString>
+                                                <Span Text="Mức xử phạt: " />
+                                                <Span Text="{Binding Avg}" />
+                                                <Span Text=" tr" />
                                             </FormattedString>
                                         </Label.FormattedText>
                                     </Label>
