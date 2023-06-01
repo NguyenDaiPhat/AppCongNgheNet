@@ -66,5 +66,11 @@ namespace AppCongNgheNet.Views
             // Điều hướng đến layout chỉ định
             await Navigation.PushAsync(new PageAddArticles());
         }
+
+        private async void Button_Search(object sender, EventArgs e)
+        {
+            string x = search.Text;
+            await Navigation.PushAsync(new SectionsPage(x));
+        }
     }
 }

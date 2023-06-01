@@ -20,8 +20,8 @@
                 <Grid.RowDefinitions>
                     <RowDefinition Height="*" />
                 </Grid.RowDefinitions>
-                <Entry FontSize="18" Placeholder="Tìm kiếm ..."  Grid.Row="0" Grid.Column="0"/>
-                <ImageButton BackgroundColor="Transparent" Source="IconSearch.png" Grid.Row="0" Grid.Column="1" HeightRequest="75" WidthRequest="32" />
+                <Entry x:Name="search" FontSize="18" Placeholder="Tìm kiếm ..."  Grid.Row="0" Grid.Column="0"/>
+                <ImageButton Clicked="Button_Search" BackgroundColor="Transparent" Source="IconSearch.png" Grid.Row="0" Grid.Column="1" HeightRequest="75" WidthRequest="32" />
             </Grid>
 
 
@@ -38,7 +38,7 @@
                                 <Grid>
                                     <Grid.RowDefinitions>
                                         <RowDefinition Height="*" />
-                                        <RowDefinition Height="auto" />
+                                        <RowDefinition Height="*" />
                                     </Grid.RowDefinitions>
                                     <Grid.ColumnDefinitions>
                                         <ColumnDefinition Width="*" />

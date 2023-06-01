@@ -3,6 +3,7 @@ using SQLite;
 using System;
 using System.Collections.Generic;
 using System.IO;
+using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
@@ -27,18 +28,36 @@ namespace AppCongNgheNet.Databases
         {
             return _database.Table<Chapter>().ToListAsync();
         }
-        public Task<List<Article>> GetArticleAsync()
+        public async Task<User> GetUserByUsername(string username)
         {
-            return _database.Table<Article>().ToListAsync();
+            return await _database.Table<User>().FirstOrDefaultAsync(u => u.UserName == username);
         }
-        public Task<List<Section>> GetSectionAsync()
+        public async Task<List<Article>> GetArticlesByChapterSelected(int chapterID)
         {
-            return _database.Table<Section>().ToListAsync();
+            return await _database.Table<Article>().Where(a => a.ChapterID == chapterID).ToListAsync();
         }
-        public Task<List<User>> GetUserAsync()
+        public async Task<List<Section>> GetSectionsByArticleSelected(int articleID)
         {
-            return _database.Table<User>().ToListAsync();
+            return await _database.Table<Section>().Where(a => a.ArticleID == articleID).ToListAsync();
         }
+        public async Task<List<Section>> SearchSections(string searchText)
+        {
+            List<Section> searchResults = await _database.Table<Section>()
+                                                        .Where(s => s.Content.Contains(searchText))
+                                                        .ToListAsync();
+
+            return searchResults;
+        }
+        public async Task<List<Section>> SearchSectionsAndArticleID(string searchText, int articleID)
+        {
+            string query = "SELECT * FROM Section WHERE ArticleID = ? AND Content LIKE ?";
+            List<Section> searchResults = await _database.QueryAsync<Section>(query, articleID, $"%{searchText}%");
+
+            return searchResults;
+        }
+
+
+
         // insert
         public Task InsertChapterAsync(Chapter chapter)
         {
@@ -100,21 +119,7 @@ namespace AppCongNgheNet.Databases
             await _database.DeleteAsync<Section>(sectionID);
         }
         //query
-        public Task QueryAsync(string username, string password, string email, int mobie)
-        {
-            return _database.QueryAsync<User>("SELECT * FROM Person WHERE Subscribed = true");
-        }
-        public async Task<User> GetUserByUsername(string username)
-        {
-            return await _database.Table<User>().FirstOrDefaultAsync(u => u.UserName == username);
-        }
-        public async Task<List<Article>> GetArticlesByChapterSelected(int chapterID)
-        {
-            return await _database.Table<Article>().Where(a => a.ChapterID == chapterID).ToListAsync();
-        }
-        public async Task<List<Section>> GetSectionsByArticleSelected(int articleID)
-        {
-            return await _database.Table<Section>().Where(a => a.ArticleID == articleID).ToListAsync();
-        }
+        
+
     }
 }

@@ -1,7 +1,9 @@
 ﻿using AppCongNgheNet.Models;
 using AppCongNgheNet.ViewModels;
+using SQLite;
 using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -17,6 +19,25 @@ namespace AppCongNgheNet.Views
         private SectionsViewModel _sectionsViewModel;
         private ToolbarItem addToolbarItem;
         private Article _article;
+        private string _searchText;
+        public SectionsPage(string searchText)
+        {
+            InitializeComponent();
+            //PerformSearch();
+            _searchText = searchText;
+            _sectionsViewModel = new SectionsViewModel();
+            BindingContext = _sectionsViewModel;
+            addToolbarItem = new ToolbarItem
+            {
+                IconImageSource = "IconAdd.png",
+                //Text = "Add",
+                Command = new Command(AddChapter_Clicked)
+            };
+            if (((App)Application.Current).IsAdmin) ToolbarItems.Add(addToolbarItem);
+        }
+        
+
+
         public SectionsPage(Article article)
         {
             InitializeComponent();
@@ -39,7 +60,13 @@ namespace AppCongNgheNet.Views
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-            collectionView.ItemsSource = await App.Database.GetSectionsByArticleSelected(_article.ID+5);
+            if (_searchText != null)
+            {
+                search.Text = _searchText;
+                collectionView.ItemsSource = await App.Database.SearchSections(_searchText);
+            }
+            else
+                collectionView.ItemsSource = await App.Database.GetSectionsByArticleSelected(_article.ID + 5);
         }
         Section sectionSelection;
         async void collectionView_SelectionChanged(System.Object sender, Xamarin.Forms.SelectionChangedEventArgs e)
@@ -64,6 +91,12 @@ namespace AppCongNgheNet.Views
         {
             // Điều hướng đến layout chỉ định
             await Navigation.PushAsync(new PageAddSections());
+        }
+
+        private async void Button_Search(object sender, EventArgs e)
+        {
+            string x = search.Text;
+            await Navigation.PushAsync(new SectionsPage(x));
         }
     }
 }

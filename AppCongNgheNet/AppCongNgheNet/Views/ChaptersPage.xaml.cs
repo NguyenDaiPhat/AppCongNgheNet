@@ -108,5 +108,10 @@ namespace AppCongNgheNet.Views
             }
         }
 
+        private async void Button_Search(object sender, EventArgs e)
+        {
+            string x = search.Text;
+            await Navigation.PushAsync(new SectionsPage(x));
+        }
     }
 }
