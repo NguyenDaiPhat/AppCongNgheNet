@@ -1,87 +1,27 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="AppCongNgheNet.Views.PageAddSections">
+             x:Class="AppCongNgheNet.Views.PageAddSections" Title="Thêm khoản mới">
     <ContentPage.Content>
         <StackLayout Orientation="Vertical" Padding="10">
             <StackLayout Orientation="Vertical" Padding="10">
-                <Label Text="THÊM NỘI DUNG MỚI"
-                   VerticalOptions="Center"
-                   HorizontalOptions="Center"
-                   Padding="5"
-                   TextColor="Black"
-                   FontSize="Medium"></Label>
-                <Label Text="ID"
-                   Padding="5"
-                   TextColor="Black"
-                   FontSize="Medium"></Label>
-                <Entry IsTextPredictionEnabled="False"
-                   IsSpellCheckEnabled="False"
-                   Keyboard="Numeric"></Entry>
-                <Label Text="Tittle"
-                   Padding="5"
-                   TextColor="Black"
-                   FontSize="Medium"></Label>
-                <Entry IsTextPredictionEnabled="False"
+                <Entry x:Name="txtContent" Placeholder="Content" IsTextPredictionEnabled="False"
                    IsSpellCheckEnabled="False"
                    Keyboard="Text"></Entry>
-                <Label Text="Content"
-                   Padding="5"
-                   TextColor="Black"
-                   FontSize="Medium"></Label>
-                <Entry IsTextPredictionEnabled="False"
+                <Entry x:Name="txtMin" Placeholder="Min price" IsTextPredictionEnabled="False"
                    IsSpellCheckEnabled="False"
                    Keyboard="Text"></Entry>
-                <Label Text="Sanction level"
-                   Padding="5"
-                   TextColor="Black"
-                   FontSize="Medium"></Label>
-                <StackLayout Orientation="Horizontal">
-                    <StackLayout Orientation="Horizontal">
-                        <Label Text="Min"
-                        Padding="5"
-                        TextColor="Black"
-                        FontSize="Medium"></Label>
-                        <Entry IsTextPredictionEnabled="False"
-                        IsSpellCheckEnabled="False"
-                        Keyboard="Text"></Entry>
-                    </StackLayout>
-                    <StackLayout Orientation="Horizontal">
-                        <Label Text="Max"
-                        Padding="5"
-                        TextColor="Black"
-                        FontSize="Medium"></Label>
-                        <Entry IsTextPredictionEnabled="False"
-                        IsSpellCheckEnabled="False"
-                        Keyboard="Text"></Entry>
-                    </StackLayout>
-                    <StackLayout Orientation="Horizontal">
-                        <Label Text="Avg"
-                        Padding="5"
-                        TextColor="Black"
-                        FontSize="Medium"></Label>
-                        <Entry IsTextPredictionEnabled="False"
-                        IsSpellCheckEnabled="False"
-                        Keyboard="Text"></Entry>
-                    </StackLayout>
-                </StackLayout>
-                <Label Text="Decree"
-                   Padding="5"
-                   TextColor="Black"
-                   FontSize="Medium"></Label>
-                <Entry IsTextPredictionEnabled="False"
+                <Entry x:Name="txtMax" Placeholder="Max price" IsTextPredictionEnabled="False"
+                   IsSpellCheckEnabled="False"
+                   Keyboard="Text"></Entry>
+                <Entry x:Name="txtDecree" Placeholder="Decree" IsTextPredictionEnabled="False"
                    IsSpellCheckEnabled="False"
                    Keyboard="Text"></Entry>
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="30">
-                    <Button BorderColor="Pink" 
+                    <Button Clicked="Button_Add" BorderColor="Pink" 
                         BackgroundColor="Pink"
                         CornerRadius="10"
-                        WidthRequest="150"
-                        Text="CANCEL"></Button>
-                    <Button BorderColor="Pink" 
-                        BackgroundColor="Pink"
-                        CornerRadius="10"
-                        WidthRequest="150"
+                        WidthRequest="310"
                         Text="SAVE"></Button>
                 </StackLayout>
             </StackLayout>

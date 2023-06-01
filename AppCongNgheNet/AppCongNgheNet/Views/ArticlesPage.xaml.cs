@@ -34,7 +34,7 @@ namespace AppCongNgheNet.Views
         private async void AddChapter_Clicked()
         {
             // Điều hướng đến layout chỉ định
-            await Navigation.PushAsync(new PageAddArticles());
+            await Navigation.PushAsync(new PageAddArticles(_chapter));
         }
         protected override async void OnAppearing()
         {
@@ -64,7 +64,7 @@ namespace AppCongNgheNet.Views
         private async void AddArticleToolbar_Clicked(object sender, EventArgs e)
         {
             // Điều hướng đến layout chỉ định
-            await Navigation.PushAsync(new PageAddArticles());
+            await Navigation.PushAsync(new PageAddArticles(_chapter));
         }
 
         private async void Button_Search(object sender, EventArgs e)

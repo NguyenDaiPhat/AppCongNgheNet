@@ -31,7 +31,7 @@ namespace AppCongNgheNet.Views
             {
                 IconImageSource = "IconAdd.png",
                 //Text = "Add",
-                Command = new Command(AddChapter_Clicked)
+                Command = new Command(AddSection_Clicked)
             };
             if (((App)Application.Current).IsAdmin) ToolbarItems.Add(addToolbarItem);
         }
@@ -48,24 +48,24 @@ namespace AppCongNgheNet.Views
             {
                 IconImageSource = "IconAdd.png",
                 //Text = "Add",
-                Command = new Command(AddChapter_Clicked)
+                Command = new Command(AddSection_Clicked)
             };
             if (((App)Application.Current).IsAdmin) ToolbarItems.Add(addToolbarItem);
         }
-        private async void AddChapter_Clicked()
+        private async void AddSection_Clicked()
         {
             // Điều hướng đến layout chỉ định
-            await Navigation.PushAsync(new PageAddSections());
+            await Navigation.PushAsync(new PageAddSections(_article));
         }
         protected override async void OnAppearing()
         {
             base.OnAppearing();
-            if (_searchText != null)
-            {
-                search.Text = _searchText;
-                collectionView.ItemsSource = await App.Database.SearchSections(_searchText);
-            }
-            else
+            //if (_searchText != null)
+            //{
+            //    search.Text = _searchText;
+            //    collectionView.ItemsSource = await App.Database.SearchSections(_searchText);
+            //}
+            //else
                 collectionView.ItemsSource = await App.Database.GetSectionsByArticleSelected(_article.ID + 5);
         }
         Section sectionSelection;
@@ -90,7 +90,7 @@ namespace AppCongNgheNet.Views
         private async void AddSection_Clicked(object sender, EventArgs e)
         {
             // Điều hướng đến layout chỉ định
-            await Navigation.PushAsync(new PageAddSections());
+            await Navigation.PushAsync(new PageAddSections(_article));
         }
 
         private async void Button_Search(object sender, EventArgs e)
