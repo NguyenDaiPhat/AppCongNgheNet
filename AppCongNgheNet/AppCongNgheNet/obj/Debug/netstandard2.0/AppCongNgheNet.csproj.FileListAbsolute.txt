@@ -19,8 +19,10 @@ D:\PHENIKAA\Ki4\CongNgheNet\AppCongNgheNet\AppCongNgheNet\AppCongNgheNet\obj\Deb
 D:\PHENIKAA\Ki4\CongNgheNet\AppCongNgheNet\AppCongNgheNet\AppCongNgheNet\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
 D:\PHENIKAA\Ki4\CongNgheNet\AppCongNgheNet\AppCongNgheNet\AppCongNgheNet\obj\Debug\netstandard2.0\Views\RegisterPage.xaml.g.cs
 D:\PHENIKAA\Ki4\CongNgheNet\AppCongNgheNet\AppCongNgheNet\AppCongNgheNet\obj\Debug\netstandard2.0\Views\ArticlesPage.xaml.g.cs
-D:\PHENIKAA\Ki4\CongNgheNet\AppCongNgheNet\AppCongNgheNet\AppCongNgheNet\obj\Debug\netstandard2.0\Views\DetailsPage.xaml.g.cs
 D:\PHENIKAA\Ki4\CongNgheNet\AppCongNgheNet\AppCongNgheNet\AppCongNgheNet\obj\Debug\netstandard2.0\Views\SectionsPage.xaml.g.cs
 D:\PHENIKAA\Ki4\CongNgheNet\AppCongNgheNet\AppCongNgheNet\AppCongNgheNet\obj\Debug\netstandard2.0\Views\PageAddArticles.xaml.g.cs
 D:\PHENIKAA\Ki4\CongNgheNet\AppCongNgheNet\AppCongNgheNet\AppCongNgheNet\obj\Debug\netstandard2.0\Views\PageAddChapters.xaml.g.cs
 D:\PHENIKAA\Ki4\CongNgheNet\AppCongNgheNet\AppCongNgheNet\AppCongNgheNet\obj\Debug\netstandard2.0\Views\PageAddSections.xaml.g.cs
+D:\PHENIKAA\Ki4\CongNgheNet\AppCongNgheNet\AppCongNgheNet\AppCongNgheNet\obj\Debug\netstandard2.0\Views\ArticlesShowInfoPage.xaml.g.cs
+D:\PHENIKAA\Ki4\CongNgheNet\AppCongNgheNet\AppCongNgheNet\AppCongNgheNet\obj\Debug\netstandard2.0\Views\ChaptersShowInfoPage.xaml.g.cs
+D:\PHENIKAA\Ki4\CongNgheNet\AppCongNgheNet\AppCongNgheNet\AppCongNgheNet\obj\Debug\netstandard2.0\Views\SectionsShowInfo.xaml.g.cs

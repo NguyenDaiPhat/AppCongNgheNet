@@ -113,5 +113,12 @@ namespace AppCongNgheNet.Views
             string x = search.Text;
             await Navigation.PushAsync(new SectionsPage(x));
         }
+
+        private async void Button_ShowInfo(object sender, EventArgs e)
+        {
+            var button = (ImageButton)sender;
+            var chapter = button.CommandParameter as Chapter;
+            await Navigation.PushAsync(new ChaptersShowInfoPage(chapter));
+        }
     }
 }

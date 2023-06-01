@@ -72,7 +72,7 @@ namespace AppCongNgheNet.Views
         async void collectionView_SelectionChanged(System.Object sender, Xamarin.Forms.SelectionChangedEventArgs e)
         {
             sectionSelection = e.CurrentSelection[0] as Section;
-            await Navigation.PushAsync(new DetailsPage(sectionSelection));
+            await Navigation.PushAsync(new SectionsShowInfo(sectionSelection));
         }
         private async void Button_Delete(object sender, EventArgs e)
         {
@@ -97,6 +97,12 @@ namespace AppCongNgheNet.Views
         {
             string x = search.Text;
             await Navigation.PushAsync(new SectionsPage(x));
+        }
+        private async void Button_ShowInfo(object sender, EventArgs e)
+        {
+            var button = (ImageButton)sender;
+            var section = button.CommandParameter as Section;
+            await Navigation.PushAsync(new SectionsShowInfo(section));
         }
     }
 }

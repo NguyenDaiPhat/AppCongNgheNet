@@ -14,10 +14,12 @@ namespace AppCongNgheNet.ViewModels
     public class ChaptersViewModel : BaseViewModel
     {
         public ICommand DeleteCommand { get; private set; }
+        //public ICommand ShowInfoCommand { get; private set; }
 
         public ChaptersViewModel()
         {
             DeleteCommand = new Command<Chapter>(OnDeleteCommandExecuted);
+            //ShowInfoCommand = new Command<Chapter>(OnShowInfoCommandExecuted);
         }
 
         private async void OnDeleteCommandExecuted(Chapter chapter)
@@ -29,5 +31,6 @@ namespace AppCongNgheNet.ViewModels
                 await App.Database.DeleteChapter(chapterIDToDelete);
             }
         }
+
     }
 }
