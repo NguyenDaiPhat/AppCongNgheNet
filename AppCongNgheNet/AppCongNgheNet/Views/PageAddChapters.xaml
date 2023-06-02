@@ -4,10 +4,10 @@
              x:Class="AppCongNgheNet.Views.PageAddChapters" Title="Thêm/sửa chương ">
     <ContentPage.Content>
         <StackLayout Orientation="Vertical" Padding="20">
-            <Entry x:Name="txtTitle" Placeholder="Title" IsTextPredictionEnabled="False"
+            <Entry x:Name="txtTitle" Placeholder="Chủ đề" IsTextPredictionEnabled="False"
                    IsSpellCheckEnabled="False"
                    Keyboard="Text"></Entry>
-            <Entry x:Name="txtDecree" Placeholder="Decree" IsTextPredictionEnabled="False"
+            <Entry x:Name="txtDecree" Placeholder="Nghị định số" IsTextPredictionEnabled="False"
                    IsSpellCheckEnabled="False"
                    Keyboard="Text"></Entry>
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="30">
@@ -16,7 +16,7 @@
                         BackgroundColor="Pink"
                         CornerRadius="10"
                         WidthRequest="310"
-                        Text="SAVE"></Button>
+                        Text="LƯU"></Button>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

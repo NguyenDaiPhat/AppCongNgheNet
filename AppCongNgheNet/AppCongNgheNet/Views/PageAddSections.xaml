@@ -5,16 +5,16 @@
     <ContentPage.Content>
         <StackLayout Orientation="Vertical" Padding="10">
             <StackLayout Orientation="Vertical" Padding="10">
-                <Entry x:Name="txtContent" Placeholder="Content" IsTextPredictionEnabled="False"
+                <Entry x:Name="txtContent" Placeholder="Nội dung" IsTextPredictionEnabled="False"
                    IsSpellCheckEnabled="False"
                    Keyboard="Text"></Entry>
-                <Entry x:Name="txtMin" Placeholder="Min price" IsTextPredictionEnabled="False"
+                <Entry x:Name="txtMin" Placeholder="Mức sử phạt thấp nhất" IsTextPredictionEnabled="False"
                    IsSpellCheckEnabled="False"
                    Keyboard="Text"></Entry>
-                <Entry x:Name="txtMax" Placeholder="Max price" IsTextPredictionEnabled="False"
+                <Entry x:Name="txtMax" Placeholder="Mức sử phạt cao nhất" IsTextPredictionEnabled="False"
                    IsSpellCheckEnabled="False"
                    Keyboard="Text"></Entry>
-                <Entry x:Name="txtDecree" Placeholder="Decree" IsTextPredictionEnabled="False"
+                <Entry x:Name="txtDecree" Placeholder="Nghị định số" IsTextPredictionEnabled="False"
                    IsSpellCheckEnabled="False"
                    Keyboard="Text"></Entry>
                 <StackLayout Orientation="Horizontal" HorizontalOptions="Center" Spacing="30">
@@ -22,7 +22,7 @@
                         BackgroundColor="Pink"
                         CornerRadius="10"
                         WidthRequest="310"
-                        Text="SAVE"></Button>
+                        Text="LƯU"></Button>
                 </StackLayout>
             </StackLayout>
         </StackLayout>

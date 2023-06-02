@@ -21,7 +21,7 @@
                     <Grid.RowDefinitions>
                         <RowDefinition Height="40" />
                     </Grid.RowDefinitions>
-                    <Entry x:Name="search" FontSize="14" Placeholder="Tìm kiếm ..." Grid.Column="0" VerticalOptions="End"/>
+                    <Entry x:Name="search" TextColor="Black" FontSize="14" Placeholder="Tìm kiếm ..." Grid.Column="0" VerticalOptions="End"/>
                     <ImageButton Margin="0,0,10,0" Clicked="Button_Search" WidthRequest="20" HeightRequest="20" BackgroundColor="Transparent" Source="IconSearch.png" Grid.Column="1" />
                 </Grid>
             </Frame>
